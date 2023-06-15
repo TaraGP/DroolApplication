@@ -1,0 +1,9 @@
+package rules;
+    import com.example.DroolApplication.Person;
+
+    rule "Car Eligibility Rule"
+        when
+            person: Person(age > 18 && age < 60);
+        then
+            person.setEligibleForCar(true);
+    end;
